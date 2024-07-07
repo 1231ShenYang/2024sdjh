@@ -1,0 +1,22 @@
+\chapter{安装基础软件}
+\hypertarget{md_day1}{}\label{md_day1}\index{安装基础软件@{安装基础软件}}
+\label{md_day1_autotoc_md0}%
+\Hypertarget{md_day1_autotoc_md0}%
+\texorpdfstring{$>$}{>}apt install git cmake g++ gcc clang libomp-\/dev -\/y
+
+在该处安装{\ttfamily libomp-\/dev}是因为发现clangd在代码编辑时对{\ttfamily omp.\+h}会报错，这是由于\+GCC和\+Clang的open\+MP库并不相同(libgomp libomp)，因此使用libomp并在{\ttfamily \texorpdfstring{$\sim$}{\string~}/.config/clangd/config.\+yaml}中加入对应{\ttfamily omp.\+h}的位置就可以解决报错
+
+\texorpdfstring{$>$}{>}wget \href{https://github.com/google/googletest/archive/refs/tags/v1.14.0.tar.gz}{\texttt{ https\+://github.\+com/google/googletest/archive/refs/tags/v1.\+14.\+0.\+tar.\+gz}} \textbackslash{} \texorpdfstring{$>$}{>}tar -\/xzf ./\texorpdfstring{$\ast$}{*}.tar.\+gz\textbackslash{} \texorpdfstring{$>$}{>}cd google\texorpdfstring{$\ast$}{*} \&\& mkdir build \&\& cd build \textbackslash{} \texorpdfstring{$>$}{>}cmake .. \&\& make -\/j8 \&\& make install \textbackslash{} \texorpdfstring{$>$}{>}cd ../../ \&\& rm -\/rf google\texorpdfstring{$\ast$}{*} \texorpdfstring{$\ast$}{*}.tar.\+gz
+
+\texorpdfstring{$>$}{>}wget \href{https://www.doxygen.nl/files/doxygen-1.11.0.linux.bin.tar.gz}{\texttt{ https\+://www.\+doxygen.\+nl/files/doxygen-\/1.\+11.\+0.\+linux.\+bin.\+tar.\+gz}} \textbackslash{} \texorpdfstring{$>$}{>}tar -\/xzf ./\texorpdfstring{$\ast$}{*}.gz \textbackslash{} \texorpdfstring{$>$}{>}cd doxygen\texorpdfstring{$\ast$}{*} \&\& cd bin \&\& mv \texorpdfstring{$\ast$}{*} /usr/local/bin \textbackslash{} \texorpdfstring{$>$}{>}cd ../../ \&\& rm -\/rf doxy\texorpdfstring{$\ast$}{*} \textbackslash{} \texorpdfstring{$>$}{>}apt直接安装的doxygen版本较低为1.9.\+8，最新为1.11.\+0\hypertarget{md_day1_autotoc_md1}{}\doxysubsection{\texorpdfstring{配置插件}{配置插件}}\label{md_day1_autotoc_md1}
+\texorpdfstring{$>$}{>}vscode安装clangd插件，为避免一些报错配置项目时使用cmake，并可以使用{\ttfamily cmake -\/DCMAKE\+\_\+\+EXPORT\+\_\+\+COMPILE\+\_\+\+COMMANDS=True .}生成{\ttfamily compile\+\_\+commands.\+json}文件
+
+\texorpdfstring{$>$}{>}vscode安装{\ttfamily C++ Test\+Mate}插件，注意配置路径
+
+\texorpdfstring{$>$}{>}vscode安装{\ttfamily Doxygen Document Gnerator}，开箱即用\hypertarget{md_day1_autotoc_md2}{}\doxysubsection{\texorpdfstring{拉取远程存储库}{拉取远程存储库}}\label{md_day1_autotoc_md2}
+\begin{quote}
+git clone \href{https://gitee.com/oscc-project/iTraining.git}{\texttt{ https\+://gitee.\+com/oscc-\/project/i\+Training.\+git}} \end{quote}
+
+
+\begin{quote}
+git clone \href{https://gitee.com/oscc-project/iEDA.git}{\texttt{ https\+://gitee.\+com/oscc-\/project/i\+EDA.\+git}} \end{quote}
