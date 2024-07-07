@@ -43,6 +43,35 @@
 
 
 ### 拉取远程存储库
-> git clone https://gitee.com/oscc-project/iTraining.git
+> git clone https://github.com/OSCC-Project/iTraining.git
 
 > git clone https://gitee.com/oscc-project/iEDA.git
+
+
+### git 命令
+>git clone xxx.git \
+>git checkout -b main \
+>git add . \
+>git checkout master \
+>git merge main \
+>git diff \
+>git commit \
+>git push -u origin master \
+>git checkout main \
+>git pull origin master \
+
+### mobaxterm和Xshell 及 Linux命令等
+>两者相对于vscode对服务器的负担小的多，vscode由于远程及其它扩展会消耗一部分服务器资源
+>两者都配置过并使用过一段时间了 在此不多说明
+
+
+### 代码规范
+>代码规范是coding中非常重要的一部分，在项目开始时确定，影响着编程时的效率和心情 \
+>一个规范好的代码具有很强的可读性，其次是项目结构和代码是相对整齐的，让人容易记住结构有利于编程和维护 \
+>一个没有规范的代码会使得代码可读性变差，在互相交流时难以阅读代码（难以理解的变量名或函数），使得编程效率变低。\
+>在文档中对命名和一些方法的使用进行了比较详细的说明，并对一些编程情况进行了建议，不少是容易在细节引发问题的情况。\
+
+
+### 软件设计思想
+>软件的设计是实现所需要实现的功能并在该过程中对代码进行组织和设计，好的代码是简洁的、可读性好的、效率高的，\
+>并且在编程时要注意多写注释，方便自己和项目的其它人。
